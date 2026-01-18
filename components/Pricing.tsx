@@ -47,15 +47,16 @@ export default function Pricing() {
 
                             {plan.price && <div className="text-3xl font-black mb-6">{currencySymbol}{plan.price.toLocaleString()} {currency}</div>}
 
-                            <Link
-                                href={`https://wa.me/5218716143589?text=Hola!%20quiero%20información%20sobre%20desarrollo%20web%20y%20una%20cotización`}
+                            <button
                                 className={`w-full py-3 px-4 mb-8 font-semibold transition ${plan.featured
                                     ? "bg-white text-black hover:bg-white/90"
                                     : "border border-white/40 hover:border-white hover:bg-white/5"
                                     }`}
                             >
-                                {plan.cta}
-                            </Link>
+                                <Link href={`https://wa.me/5218716143589?text=Hola!%20quiero%20información%20sobre%20desarrollo%20web%20y%20una%20cotización`}>
+                                    {plan.cta}
+                                </Link>
+                            </button>
 
                             <div className="space-y-4">
                                 {plan.features.map((feature) => (
