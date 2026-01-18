@@ -4,6 +4,7 @@ import { Check } from "lucide-react"
 import { useLocation } from "@/lib/location-context"
 import { getPricingByCountry } from "@/lib/pricing-data"
 import { LocationSelector } from "./LocationSelector"
+import Link from "next/link"
 
 export default function Pricing() {
     const { currencySymbol, country, currency } = useLocation()
@@ -46,14 +47,15 @@ export default function Pricing() {
 
                             {plan.price && <div className="text-3xl font-black mb-6">{currencySymbol}{plan.price.toLocaleString()} {currency}</div>}
 
-                            <button
+                            <Link
+                                href={`https://wa.me/5218716143589?text=Hola!%20quiero%20información%20sobre%20desarrollo%20web%20y%20una%20cotización`}
                                 className={`w-full py-3 px-4 mb-8 font-semibold transition ${plan.featured
                                     ? "bg-white text-black hover:bg-white/90"
                                     : "border border-white/40 hover:border-white hover:bg-white/5"
                                     }`}
                             >
                                 {plan.cta}
-                            </button>
+                            </Link>
 
                             <div className="space-y-4">
                                 {plan.features.map((feature) => (

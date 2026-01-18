@@ -17,7 +17,6 @@ const REGIONS: { label: string; value: Country; flag: string }[] = [
 export function LocationModal() {
     const { setCountry, country } = useLocation()
     const [isOpen, setIsOpen] = useState(false)
-    const [hasSelection, setHasSelection] = useState(false)
 
     useEffect(() => {
         // Show modal if no country selected yet
@@ -36,7 +35,7 @@ export function LocationModal() {
     }
 
     return (
-        <div className="fixed z-100 inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 py-6">
+        <div className="fixed z-100 inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 py-6">
             <div className="bg-black border border-white/20 rounded-lg p-8 max-w-md w-full max-h-[90vh] overflow-y-auto ">
                 <span className="text-2xl font-bold mb-6">¿De dónde nos visitas?</span>
 

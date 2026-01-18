@@ -46,7 +46,7 @@ export default function Footer() {
                         <p className="text-white/60 text-sm">Síguenos:</p>
                         <div className="flex gap-4">
                             <Link aria-label="Ver perfil de Tiktok"
-                                href="#" className="text-white/60 hover:text-white transition">
+                                href="https://www.tiktok.com/@attocode" className="text-white/60 hover:text-white transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
                             </Link>
                             <Link aria-label="Ver perfil de GitHub"
